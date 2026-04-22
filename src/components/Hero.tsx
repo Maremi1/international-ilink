@@ -43,7 +43,7 @@ const Hero = () => {
           >
             Bridging Capital,<br />
             Innovation &{" "}
-            <span className="text-gradient drop-shadow-[0_0_30px_hsl(var(--primary)/0.8)] [text-shadow:0_0_40px_hsl(var(--primary)/0.6)]">Global Markets</span>
+            <span className="text-gradient animate-text-glow-pulse">Global Markets</span>
           </motion.h1>
 
           <motion.p
