@@ -15,10 +15,10 @@ const ThemeToggle = ({ className = "" }: { className?: string }) => {
       className={`relative inline-flex items-center w-16 h-9 rounded-full glass border border-border hover:border-primary/40 transition-all p-1 ${className}`}
     >
       {/* Track icons */}
-      <span className="absolute left-2 text-yellow-500 pointer-events-none">
+      <span className="absolute left-2 text-muted-foreground pointer-events-none">
         <Sun size={14} />
       </span>
-      <span className="absolute right-2 text-primary pointer-events-none">
+      <span className="absolute right-2 text-muted-foreground pointer-events-none">
         <Moon size={14} />
       </span>
 
