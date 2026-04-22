@@ -5,8 +5,63 @@
 @tailwind utilities;
 
 @layer base {
+  /* Light theme (default) — clean white with brand cyan/navy accents */
   :root {
-    /* iLink brand — deep navy + electric cyan */
+    --background: 210 40% 98%;
+    --foreground: 224 71% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 12%;
+
+    --primary: 200 95% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 195 100% 60%;
+
+    --secondary: 224 80% 28%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 30% 94%;
+    --muted-foreground: 222 20% 40%;
+
+    --accent: 195 100% 50%;
+    --accent-foreground: 224 71% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 30% 86%;
+    --input: 215 30% 86%;
+    --ring: 200 95% 45%;
+
+    --radius: 1rem;
+
+    /* Glassmorphism tokens — light */
+    --glass-bg: 0 0% 100% / 0.6;
+    --glass-strong-bg: 0 0% 100% / 0.75;
+    --glass-border: 200 95% 45% / 0.18;
+    --glass-highlight: 200 100% 75% / 0.4;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 95% 50%) 0%, hsl(224 80% 35%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(200 95% 70% / 0.35) 0%, transparent 60%),
+                     radial-gradient(ellipse at bottom, hsl(224 80% 70% / 0.3) 0%, transparent 70%),
+                     linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(210 50% 96%) 100%);
+    --gradient-glow: radial-gradient(circle, hsl(200 95% 55% / 0.35) 0%, transparent 70%);
+    --gradient-text: linear-gradient(135deg, hsl(224 80% 30%) 0%, hsl(200 95% 45%) 50%, hsl(195 100% 55%) 100%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(200 95% 55% / 0.25);
+    --shadow-elegant: 0 25px 60px -15px hsl(222 50% 30% / 0.25);
+    --shadow-glass: 0 8px 32px hsl(222 40% 30% / 0.12), inset 0 1px 0 hsl(0 0% 100% / 0.6);
+
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark theme — deep navy + electric cyan */
+  .dark {
     --background: 222 60% 6%;
     --foreground: 210 40% 98%;
 
@@ -16,12 +71,10 @@
     --popover: 222 50% 9%;
     --popover-foreground: 210 40% 98%;
 
-    /* Brand cyan from logo chip */
     --primary: 200 95% 55%;
     --primary-foreground: 222 60% 6%;
     --primary-glow: 195 100% 65%;
 
-    /* Brand deep navy from "Link" wordmark */
     --secondary: 224 80% 28%;
     --secondary-foreground: 210 40% 98%;
 
@@ -38,14 +91,11 @@
     --input: 215 40% 22%;
     --ring: 200 95% 55%;
 
-    --radius: 1rem;
-
-    /* Glassmorphism tokens */
     --glass-bg: 222 50% 12% / 0.5;
+    --glass-strong-bg: 222 50% 14% / 0.7;
     --glass-border: 200 95% 55% / 0.18;
     --glass-highlight: 200 100% 75% / 0.15;
 
-    /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(200 95% 55%) 0%, hsl(224 80% 35%) 100%);
     --gradient-hero: radial-gradient(ellipse at top, hsl(200 95% 25% / 0.4) 0%, transparent 60%),
                      radial-gradient(ellipse at bottom, hsl(224 80% 20% / 0.6) 0%, transparent 70%),
@@ -53,12 +103,9 @@
     --gradient-glow: radial-gradient(circle, hsl(200 95% 55% / 0.4) 0%, transparent 70%);
     --gradient-text: linear-gradient(135deg, hsl(195 100% 75%) 0%, hsl(200 95% 55%) 50%, hsl(220 90% 60%) 100%);
 
-    /* Shadows */
     --shadow-glow: 0 0 60px hsl(200 95% 55% / 0.3);
     --shadow-elegant: 0 25px 60px -15px hsl(222 80% 4% / 0.8);
     --shadow-glass: 0 8px 32px hsl(222 80% 4% / 0.4), inset 0 1px 0 hsl(200 100% 75% / 0.1);
-
-    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -94,7 +141,7 @@
   }
 
   .glass-strong {
-    background: hsl(222 50% 14% / 0.7);
+    background: hsl(var(--glass-strong-bg));
     backdrop-filter: blur(32px) saturate(200%);
     -webkit-backdrop-filter: blur(32px) saturate(200%);
     border: 1px solid hsl(var(--glass-border));

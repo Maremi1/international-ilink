@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/ilink-logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -54,20 +55,23 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <a
-            href="#contact"
-            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium text-sm hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
-          >
-            Partner With Us
-          </a>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a
+              href="#contact"
+              className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium text-sm hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
+            >
+              Partner With Us
+            </a>
 
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 text-foreground"
-            aria-label="Menu"
-          >
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            <button
+              onClick={() => setOpen(!open)}
+              className="lg:hidden p-2 text-foreground"
+              aria-label="Menu"
+            >
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         <AnimatePresence>
