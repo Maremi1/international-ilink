@@ -202,3 +202,18 @@
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes text-glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 18px hsl(var(--primary) / 0.45));
+    text-shadow: 0 0 24px hsl(var(--primary) / 0.35);
+  }
+  50% {
+    filter: drop-shadow(0 0 32px hsl(var(--primary) / 0.85));
+    text-shadow: 0 0 48px hsl(var(--primary) / 0.7);
+  }
+}
+
+.animate-text-glow-pulse {
+  animation: text-glow-pulse 3.5s ease-in-out infinite;
+}
