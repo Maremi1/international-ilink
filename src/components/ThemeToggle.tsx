@@ -1,5 +1,5 @@
 import { Moon, Sun } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
 
 const ThemeToggle = ({ className = "" }: { className?: string }) => {
@@ -9,21 +9,29 @@ const ThemeToggle = ({ className = "" }: { className?: string }) => {
   return (
     <button
       onClick={toggleTheme}
+      role="switch"
+      aria-checked={isDark}
       aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
-      className={`relative inline-flex items-center justify-center w-10 h-10 rounded-xl glass hover:border-primary/40 transition-all ${className}`}
+      className={`relative inline-flex items-center w-16 h-9 rounded-full glass border border-border hover:border-primary/40 transition-all p-1 ${className}`}
     >
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.span
-          key={isDark ? "moon" : "sun"}
-          initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
-          animate={{ rotate: 0, opacity: 1, scale: 1 }}
-          exit={{ rotate: 90, opacity: 0, scale: 0.6 }}
-          transition={{ duration: 0.25 }}
-          className="text-foreground"
-        >
-          {isDark ? <Sun size={18} /> : <Moon size={18} />}
-        </motion.span>
-      </AnimatePresence>
+      {/* Track icons */}
+      <span className="absolute left-2 text-yellow-500 pointer-events-none">
+        <Sun size={14} />
+      </span>
+      <span className="absolute right-2 text-primary pointer-events-none">
+        <Moon size={14} />
+      </span>
+
+      {/* Sliding thumb */}
+      <motion.span
+        layout
+        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        className={`relative z-10 flex items-center justify-center w-7 h-7 rounded-full bg-primary text-primary-foreground shadow-md ${
+          isDark ? "ml-auto" : "mr-auto"
+        }`}
+      >
+        {isDark ? <Moon size={14} /> : <Sun size={14} />}
+      </motion.span>
     </button>
   );
 };
