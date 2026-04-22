@@ -38,9 +38,6 @@ const Navbar = () => {
         <div className={`glass-strong rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between transition-all`}>
           <a href="#top" className="flex items-center gap-3 group">
             <img src={logo} alt="iLink International" className="h-10 w-auto" width={40} height={40} />
-            <span className="font-display font-bold text-lg hidden sm:inline tracking-tight">
-              iLink <span className="text-primary">International</span>
-            </span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
