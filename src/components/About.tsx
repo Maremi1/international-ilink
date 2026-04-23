@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import worldMap from "@/assets/world-map.png";
+import WorldMap from "./WorldMap";
 
 const About = () => {
   return (
@@ -59,16 +59,7 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="relative"
           >
-            <div className="glass-card overflow-hidden">
-              <img
-                src={worldMap}
-                alt="Global network connecting Europe with East Africa hubs"
-                className="w-full h-auto"
-                loading="lazy"
-                width={1600}
-                height={1024}
-              />
-            </div>
+            <WorldMap />
           </motion.div>
         </div>
 

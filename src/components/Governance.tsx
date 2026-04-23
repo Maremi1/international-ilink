@@ -12,6 +12,46 @@ const Governance = () => {
   return (
     <section id="governance" className="relative py-24 md:py-32 overflow-hidden">
       <div className="glow-orb w-[400px] h-[400px] bottom-0 left-0 animate-pulse-glow" />
+
+      {/* World arc background SVG */}
+      <svg
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full opacity-20 pointer-events-none"
+        viewBox="0 0 1200 600"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <defs>
+          <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+            <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {[
+          "M 100 450 Q 600 100 1100 450",
+          "M 200 500 Q 600 200 1000 500",
+          "M 50 400 Q 600 50 1150 400",
+          "M 300 520 Q 600 280 900 520",
+        ].map((d, i) => (
+          <path
+            key={i}
+            d={d}
+            stroke="url(#arcGrad)"
+            strokeWidth="1.5"
+            fill="none"
+          />
+        ))}
+        {[
+          [180, 380],
+          [450, 240],
+          [720, 200],
+          [950, 360],
+          [600, 140],
+        ].map(([cx, cy], i) => (
+          <circle key={i} cx={cx} cy={cy} r="3" fill="hsl(var(--primary))" opacity="0.7" />
+        ))}
+      </svg>
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

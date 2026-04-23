@@ -1,19 +1,45 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useEffect, useState } from "react";
 import heroImg from "@/assets/hero-globe.jpg";
+import heroVideo from "@/assets/hero-loop.mp4.asset.json";
 
 const Hero = () => {
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setReduceMotion(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   return (
     <section id="top" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Background image */}
+      {/* Background video with image fallback */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImg}
-          alt="Global digital network connecting markets worldwide"
-          className="w-full h-full object-cover opacity-40"
-          width={1920}
-          height={1280}
-        />
+        {!reduceMotion ? (
+          <video
+            src={heroVideo.url}
+            poster={heroImg}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover opacity-40"
+            aria-hidden="true"
+          />
+        ) : (
+          <img
+            src={heroImg}
+            alt="Global digital network connecting markets worldwide"
+            className="w-full h-full object-cover opacity-40"
+            width={1920}
+            height={1280}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
       </div>
 

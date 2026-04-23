@@ -1,21 +1,27 @@
 import { motion } from "framer-motion";
 import { Briefcase, Building, Landmark } from "lucide-react";
+import imgInvestors from "@/assets/engage-investors.jpg";
+import imgCorporations from "@/assets/engage-corporations.jpg";
+import imgInstitutions from "@/assets/engage-institutions.jpg";
 
 const models = [
   {
     icon: Briefcase,
     title: "For Investors",
     items: ["Strategic Joint Ventures", "Equity Partnerships", "International Fund Investments"],
+    img: imgInvestors,
   },
   {
     icon: Building,
     title: "For Corporations",
     items: ["Digital Transformation Implementation", "Departmental Outsourcing", "Strategic Advisory"],
+    img: imgCorporations,
   },
   {
     icon: Landmark,
     title: "For Institutions / Governments",
     items: ["Smart Infrastructure (Water/Gas) Deployment", "University EdTech Platforms", "Governance Digitization"],
+    img: imgInstitutions,
   },
 ];
 
@@ -47,20 +53,33 @@ const Engagement = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="glass-card p-10 group"
+              className="glass-card group overflow-hidden flex flex-col"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <m.icon size={28} className="text-primary-foreground" />
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={m.img}
+                  alt={m.title}
+                  loading="lazy"
+                  width={800}
+                  height={512}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
               </div>
-              <h3 className="font-display text-2xl font-bold mb-5">{m.title}</h3>
-              <ul className="space-y-3">
-                {m.items.map((it) => (
-                  <li key={it} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span>{it}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="p-10 -mt-10 relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-xl">
+                  <m.icon size={28} className="text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-2xl font-bold mb-5">{m.title}</h3>
+                <ul className="space-y-3">
+                  {m.items.map((it) => (
+                    <li key={it} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>

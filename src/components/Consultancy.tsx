@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Layers, Building2, Users, Lightbulb } from "lucide-react";
+import boardroom from "@/assets/boardroom.jpg";
 
 const services = [
   { icon: Target, title: "Business Development", desc: "Growth hacking & feasibility analysis to identify and capture new market opportunities." },
@@ -29,6 +30,30 @@ const Consultancy = () => {
             Optimizing market position and operational efficiency through hands-on,
             results-oriented strategic guidance.
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="glass-card overflow-hidden mb-10 relative"
+        >
+          <img
+            src={boardroom}
+            alt="Executive boardroom strategy session"
+            loading="lazy"
+            width={1600}
+            height={896}
+            className="w-full h-[280px] md:h-[400px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-2">Strategic Advisory</div>
+            <p className="font-display text-xl md:text-2xl font-semibold max-w-2xl">
+              From the boardroom to the market — tactical execution for institutional growth.
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

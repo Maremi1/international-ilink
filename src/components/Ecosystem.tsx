@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { Briefcase, TrendingUp, GraduationCap, Cpu } from "lucide-react";
+import imgConsultancy from "@/assets/pillar-consultancy.jpg";
+import imgInvestment from "@/assets/pillar-investment.jpg";
+import imgAcademy from "@/assets/pillar-academy.jpg";
+import imgTechnology from "@/assets/pillar-technology.jpg";
 
 const pillars = [
   {
@@ -8,6 +12,7 @@ const pillars = [
     subtitle: "Corporate Advisory",
     desc: "Strategic guidance for business development, restructuring, and operational efficiency.",
     href: "#consultancy",
+    img: imgConsultancy,
   },
   {
     icon: TrendingUp,
@@ -15,6 +20,7 @@ const pillars = [
     subtitle: "Asset Management",
     desc: "Equity, funds, IPs and royalties across global jurisdictions for long-term value.",
     href: "#investment",
+    img: imgInvestment,
   },
   {
     icon: GraduationCap,
@@ -22,6 +28,7 @@ const pillars = [
     subtitle: "Human Capital",
     desc: "Bridging the skills gap with leadership, digital and advanced sales training.",
     href: "#academy",
+    img: imgAcademy,
   },
   {
     icon: Cpu,
@@ -29,6 +36,7 @@ const pillars = [
     subtitle: "Digital Platforms",
     desc: "Proprietary marketplaces, fintech, EdTech and smart infrastructure platforms.",
     href: "#technology",
+    img: imgTechnology,
   },
 ];
 
@@ -62,11 +70,22 @@ const Ecosystem = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass-card p-8 group cursor-pointer relative overflow-hidden"
+              className="glass-card group cursor-pointer relative overflow-hidden flex flex-col"
             >
+              <div className="relative h-32 overflow-hidden">
+                <img
+                  src={p.img}
+                  alt=""
+                  loading="lazy"
+                  width={800}
+                  height={512}
+                  className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+              </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-primary/10 blur-2xl group-hover:bg-primary/20 transition-all" />
-              <div className="relative">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="relative p-8 -mt-8">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
                   <p.icon size={26} className="text-primary-foreground" />
                 </div>
                 <div className="text-xs uppercase tracking-wider text-primary mb-2">0{i + 1} · {p.subtitle}</div>
