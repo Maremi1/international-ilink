@@ -1,20 +1,26 @@
 import { motion } from "framer-motion";
+import imgDigital from "@/assets/program-digital.jpg";
+import imgLeadership from "@/assets/program-leadership.jpg";
+import imgSales from "@/assets/program-sales.jpg";
 
 const programs = [
   {
     n: "01",
     title: "Digital Transformation",
     desc: "Training organizations to move beyond legacy systems and adopt modern digital frameworks built for scale and resilience.",
+    img: imgDigital,
   },
   {
     n: "02",
     title: "Leadership Transformation",
     desc: "Developing the next generation of global corporate leaders with a focus on emotional intelligence (EQ) and agile management.",
+    img: imgLeadership,
   },
   {
     n: "03",
     title: "Advanced Sales Strategies",
     desc: "Result-oriented training designed specifically for high-performance international sales teams operating across markets.",
+    img: imgSales,
   },
 ];
 
@@ -46,12 +52,23 @@ const Academy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="glass-card p-10 relative overflow-hidden group"
+              className="glass-card relative overflow-hidden group flex flex-col"
             >
-              <div className="absolute -top-6 -right-2 font-display text-[8rem] font-bold text-primary/10 group-hover:text-primary/20 transition-colors leading-none">
-                {p.n}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  loading="lazy"
+                  width={896}
+                  height={672}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                <div className="absolute top-4 right-4 font-display text-5xl font-bold text-primary/40 group-hover:text-primary/70 transition-colors">
+                  {p.n}
+                </div>
               </div>
-              <div className="relative">
+              <div className="relative p-8">
                 <div className="text-xs uppercase tracking-wider text-primary mb-3">Program {p.n}</div>
                 <h3 className="font-display text-2xl font-bold mb-4">{p.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
