@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import worldMap from "@/assets/world-map.jpg";
+import worldMap from "@/assets/world-map.png";
 
 const About = () => {
   return (
