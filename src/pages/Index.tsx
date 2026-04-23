@@ -3,12 +3,14 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Ecosystem from "@/components/Ecosystem";
 import Consultancy from "@/components/Consultancy";
-import Academy from "@/components/Academy";
 import Investment from "@/components/Investment";
+import CaseStudy from "@/components/CaseStudy";
+import Academy from "@/components/Academy";
 import Technology from "@/components/Technology";
 import Governance from "@/components/Governance";
 import Foundation from "@/components/Foundation";
 import Benefits from "@/components/Benefits";
+import Partners from "@/components/Partners";
 import Engagement from "@/components/Engagement";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,12 +23,14 @@ const Index = () => {
       <About />
       <Ecosystem />
       <Consultancy />
-      <Academy />
       <Investment />
+      <CaseStudy />
+      <Academy />
       <Technology />
       <Governance />
       <Foundation />
       <Benefits />
+      <Partners />
       <Engagement />
       <Contact />
       <Footer />
