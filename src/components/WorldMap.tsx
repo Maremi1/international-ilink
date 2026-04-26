@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/carousel";
 import hubKigali from "@/assets/hub-kigali.jpg";
 import hubDar from "@/assets/hub-dar.jpg";
-import hubEastAfrica from "@/assets/hub-east-africa.jpg";
 
 interface Hub {
   image: string;
@@ -31,12 +30,6 @@ const hubs: Hub[] = [
     label: "Dar es Salaam",
     sub: "Operations — Kinondoni",
     country: "Tanzania",
-  },
-  {
-    image: hubEastAfrica,
-    label: "East Africa",
-    sub: "Operational corridor",
-    country: "Regional reach",
   },
 ];
 
