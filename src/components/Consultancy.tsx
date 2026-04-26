@@ -41,16 +41,16 @@ const Consultancy = () => {
         >
           <img
             src={boardroom}
-            alt="Executive boardroom strategy session"
+            alt="African business professionals collaborating in a corporate boardroom meeting"
             loading="lazy"
             width={1600}
             height={896}
             className="w-full h-[280px] md:h-[400px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-card/10 pointer-events-none" />
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-2">Strategic Advisory</div>
-            <p className="font-display text-xl md:text-2xl font-semibold max-w-2xl">
+            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-2 drop-shadow-[0_1px_2px_hsl(var(--background)/0.6)]">Strategic Advisory</div>
+            <p className="font-display text-xl md:text-2xl font-semibold max-w-2xl text-card-foreground drop-shadow-[0_1px_2px_hsl(var(--background)/0.5)]">
               From the boardroom to the market — tactical execution for institutional growth.
             </p>
           </div>
