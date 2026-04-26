@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import worldMap from "@/assets/world-map-dots.jpg";
 
 interface Marker {
-  // percent positions (0-100) on a 1000x500 SVG viewport
+  // percent positions (0-100) over the map image
   x: number;
   y: number;
   label: string;
@@ -10,8 +11,8 @@ interface Marker {
 }
 
 const markers: Marker[] = [
-  { x: 56.5, y: 56, label: "Kigali", sub: "HQ — Rwanda" },
-  { x: 58, y: 62, label: "Dar es Salaam", sub: "Operations — Tanzania" },
+  { x: 56.5, y: 60, label: "Kigali", sub: "HQ — Rwanda" },
+  { x: 57.5, y: 64, label: "Dar es Salaam", sub: "Operations — Tanzania" },
 ];
 
 const WorldMap = () => {
