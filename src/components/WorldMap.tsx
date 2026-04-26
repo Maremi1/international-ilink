@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import worldMap from "@/assets/world-map-dots.jpg";
 
 interface Marker {
-  // percent positions (0-100) on a 1000x500 SVG viewport
+  // percent positions (0-100) over the map image
   x: number;
   y: number;
   label: string;
@@ -10,8 +11,8 @@ interface Marker {
 }
 
 const markers: Marker[] = [
-  { x: 56.5, y: 56, label: "Kigali", sub: "HQ — Rwanda" },
-  { x: 58, y: 62, label: "Dar es Salaam", sub: "Operations — Tanzania" },
+  { x: 56.5, y: 60, label: "Kigali", sub: "HQ — Rwanda" },
+  { x: 57.5, y: 64, label: "Dar es Salaam", sub: "Operations — Tanzania" },
 ];
 
 const WorldMap = () => {
@@ -23,38 +24,15 @@ const WorldMap = () => {
       </h3>
 
       <div className="relative w-full" style={{ aspectRatio: "1000 / 500" }}>
-        <svg viewBox="0 0 1000 500" className="absolute inset-0 w-full h-full">
-          <defs>
-            <radialGradient id="dotGrad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
-              <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-          {/* Stylized dotted world map */}
-          <g fill="hsl(var(--muted-foreground))" opacity="0.35">
-            {Array.from({ length: 36 }).flatMap((_, row) =>
-              Array.from({ length: 80 }).map((_, col) => {
-                const x = 20 + col * 12;
-                const y = 20 + row * 13;
-                // Rough continent mask based on x/y noise
-                const inLand =
-                  // North America
-                  (x > 100 && x < 280 && y > 90 && y < 220 && Math.sin(x * 0.05 + y * 0.04) > -0.2) ||
-                  // South America
-                  (x > 230 && x < 320 && y > 240 && y < 410 && Math.sin(x * 0.06 + y * 0.05) > -0.1) ||
-                  // Europe
-                  (x > 460 && x < 570 && y > 110 && y < 200 && Math.cos(x * 0.07 + y * 0.05) > -0.3) ||
-                  // Africa
-                  (x > 480 && x < 620 && y > 200 && y < 380 && Math.sin(x * 0.04 + y * 0.06) > -0.2) ||
-                  // Asia
-                  (x > 580 && x < 850 && y > 100 && y < 280 && Math.cos(x * 0.05 + y * 0.04) > -0.3) ||
-                  // Australia
-                  (x > 780 && x < 900 && y > 320 && y < 400 && Math.sin(x * 0.08 + y * 0.07) > -0.4);
-                return inLand ? <circle key={`${row}-${col}`} cx={x} cy={y} r="1.6" /> : null;
-              })
-            )}
-          </g>
-
+        <img
+          src={worldMap}
+          alt="Stylized dotted world map highlighting iLink International's East Africa hubs"
+          loading="lazy"
+          width={1600}
+          height={800}
+          className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-90"
+        />
+        <svg viewBox="0 0 1000 500" preserveAspectRatio="none" className="absolute inset-0 w-full h-full pointer-events-none">
           {/* Connection arc between markers */}
           {markers.length > 1 && (
             <motion.path
@@ -64,7 +42,7 @@ const WorldMap = () => {
               fill="none"
               strokeDasharray="4 6"
               initial={{ pathLength: 0, opacity: 0 }}
-              whileInView={{ pathLength: 1, opacity: 0.7 }}
+              whileInView={{ pathLength: 1, opacity: 0.9 }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, delay: 0.3 }}
             />
