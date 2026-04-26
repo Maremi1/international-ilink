@@ -90,8 +90,8 @@ const Technology = () => {
               </div>
               <ul className="space-y-2">
                 {g.items.map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <span className="text-foreground/50 mt-1" aria-hidden="true">▸</span>
+                  <li key={it} className="flex items-start gap-2 text-sm text-foreground/85">
+                    <span className="text-foreground/70 mt-1" aria-hidden="true">▸</span>
                     <span>{it}</span>
                   </li>
                 ))}
