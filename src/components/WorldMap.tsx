@@ -1,21 +1,60 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { MapPin } from "lucide-react";
-import worldMap from "@/assets/world-map-dots.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import hubKigali from "@/assets/hub-kigali.jpg";
+import hubDar from "@/assets/hub-dar.jpg";
+import hubEastAfrica from "@/assets/hub-east-africa.jpg";
 
-interface Marker {
-  // percent positions (0-100) over the map image
-  x: number;
-  y: number;
+interface Hub {
+  image: string;
   label: string;
   sub: string;
+  country: string;
 }
 
-const markers: Marker[] = [
-  { x: 56.5, y: 60, label: "Kigali", sub: "HQ — Rwanda" },
-  { x: 57.5, y: 64, label: "Dar es Salaam", sub: "Operations — Tanzania" },
+const hubs: Hub[] = [
+  {
+    image: hubKigali,
+    label: "Kigali",
+    sub: "HQ — Vision Arcade",
+    country: "Rwanda",
+  },
+  {
+    image: hubDar,
+    label: "Dar es Salaam",
+    sub: "Operations — Kinondoni",
+    country: "Tanzania",
+  },
+  {
+    image: hubEastAfrica,
+    label: "East Africa",
+    sub: "Operational corridor",
+    country: "Regional reach",
+  },
 ];
 
 const WorldMap = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", () => setCurrent(api.selectedScrollSnap()));
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [api]);
+
   return (
     <div className="glass-card p-6 md:p-8 relative overflow-hidden">
       <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Global Footprint</div>
@@ -23,60 +62,53 @@ const WorldMap = () => {
         Our active hubs in <span className="text-gradient">East Africa</span>
       </h3>
 
-      <div className="relative w-full" style={{ aspectRatio: "1000 / 500" }}>
-        <img
-          src={worldMap}
-          alt="Stylized dotted world map highlighting iLink International's East Africa hubs"
-          loading="lazy"
-          width={1600}
-          height={800}
-          className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-90"
-        />
-        <svg viewBox="0 0 1000 500" preserveAspectRatio="none" className="absolute inset-0 w-full h-full pointer-events-none">
-          {/* Connection arc between markers */}
-          {markers.length > 1 && (
-            <motion.path
-              d={`M ${markers[0].x * 10} ${markers[0].y * 5} Q ${(markers[0].x + markers[1].x) * 5} ${Math.min(markers[0].y, markers[1].y) * 5 - 60} ${markers[1].x * 10} ${markers[1].y * 5}`}
-              stroke="hsl(var(--primary))"
-              strokeWidth="1.5"
-              fill="none"
-              strokeDasharray="4 6"
-              initial={{ pathLength: 0, opacity: 0 }}
-              whileInView={{ pathLength: 1, opacity: 0.9 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, delay: 0.3 }}
-            />
-          )}
-        </svg>
-
-        {/* Markers as DOM for tooltips/animation */}
-        {markers.map((m) => (
-          <div
-            key={m.label}
-            className="absolute group"
-            style={{ left: `${m.x}%`, top: `${m.y}%`, transform: "translate(-50%, -50%)" }}
-          >
-            <span className="absolute inset-0 -m-2 rounded-full bg-primary/40 animate-ping-slow" />
-            <span className="relative block w-3 h-3 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary))]" />
-            <div className="absolute left-1/2 -translate-x-1/2 -top-2 -translate-y-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap glass rounded-lg px-3 py-2 text-xs">
-              <div className="flex items-center gap-1.5 font-semibold">
-                <MapPin size={10} className="text-primary" />
-                {m.label}
+      <Carousel setApi={setApi} opts={{ loop: true }} className="relative">
+        <CarouselContent>
+          {hubs.map((hub) => (
+            <CarouselItem key={hub.label}>
+              <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "3 / 2" }}>
+                <img
+                  src={hub.image}
+                  alt={`${hub.label}, ${hub.country}`}
+                  loading="lazy"
+                  width={1200}
+                  height={800}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-primary mb-2">
+                    <MapPin size={14} />
+                    {hub.country}
+                  </div>
+                  <div className="font-display text-2xl md:text-3xl font-bold leading-tight">
+                    {hub.label}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1">{hub.sub}</div>
+                </div>
               </div>
-              <div className="text-muted-foreground mt-0.5">{m.sub}</div>
-            </div>
-          </div>
-        ))}
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-3 bg-background/60 backdrop-blur border-border" />
+        <CarouselNext className="right-3 bg-background/60 backdrop-blur border-border" />
+      </Carousel>
 
-      <div className="mt-6 flex flex-wrap gap-4 text-xs text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary))]" />
-          Active hub
+      <div className="mt-5 flex items-center justify-between">
+        <div className="flex gap-2">
+          {hubs.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => api?.scrollTo(i)}
+              className={`h-1.5 rounded-full transition-all ${
+                i === current ? "w-8 bg-primary shadow-[0_0_8px_hsl(var(--primary))]" : "w-3 bg-muted-foreground/30"
+              }`}
+            />
+          ))}
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-px bg-primary opacity-70" />
-          Operational corridor
+        <div className="text-xs text-muted-foreground">
+          {current + 1} / {hubs.length}
         </div>
       </div>
     </div>
