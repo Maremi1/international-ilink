@@ -64,7 +64,7 @@ const Academy = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                <div className="absolute top-4 right-4 font-display text-5xl font-bold text-primary/40 group-hover:text-primary/70 transition-colors">
+                <div className="absolute top-4 right-4 font-display text-5xl font-bold text-primary/70 group-hover:text-primary transition-colors drop-shadow-[0_2px_4px_hsl(var(--background)/0.5)]">
                   {p.n}
                 </div>
               </div>
