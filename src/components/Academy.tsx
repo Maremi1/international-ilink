@@ -54,7 +54,7 @@ const Academy = () => {
               transition={{ duration: 0.6, delay: i * 0.12 }}
               className="glass-card relative overflow-hidden group flex flex-col"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src={p.img}
                   alt={p.title}
