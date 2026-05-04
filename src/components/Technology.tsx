@@ -118,6 +118,7 @@ const Technology = () => {
                   </li>
                 ))}
               </ul>
+              </div>
             </motion.div>
           ))}
         </div>
