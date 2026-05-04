@@ -103,7 +103,7 @@ const Technology = () => {
                   height={512}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-card/10 to-transparent" />
                 <div className="absolute bottom-3 left-3 w-11 h-11 rounded-lg bg-primary/90 backdrop-blur flex items-center justify-center shadow-[0_0_24px_hsl(var(--primary)/0.5)]">
                   <g.icon size={20} className="text-primary-foreground" />
                 </div>
