@@ -68,7 +68,7 @@ const Academy = () => {
                   {p.n}
                 </div>
               </div>
-              <div className="relative p-8">
+              <div className="relative p-8 py-[32px]">
                 <div className="text-xs uppercase tracking-wider text-primary mb-3">Program {p.n}</div>
                 <h3 className="font-display text-2xl font-bold mb-4">{p.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
