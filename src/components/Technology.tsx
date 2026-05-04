@@ -1,36 +1,48 @@
 import { motion } from "framer-motion";
 import { ShoppingBag, Banknote, Users, Shield, Wifi, GraduationCap } from "lucide-react";
 import platformsImg from "@/assets/platforms.jpg";
+import marketplaceImg from "@/assets/tech-marketplace.jpg";
+import fintechImg from "@/assets/tech-fintech.jpg";
+import communityImg from "@/assets/tech-community.jpg";
+import governanceImg from "@/assets/tech-governance.jpg";
+import edtechImg from "@/assets/tech-edtech.jpg";
+import infrastructureImg from "@/assets/tech-infrastructure.jpg";
 
 const groups = [
   {
     icon: ShoppingBag,
     title: "Global Marketplaces",
+    image: marketplaceImg,
     items: ["Mama Mia's Soko (E-commerce)", "Parcel Delivery Management"],
   },
   {
     icon: Banknote,
     title: "Fintech & Insuretech",
+    image: fintechImg,
     items: ["Bima Kwik", "AI Credit Scoring", "Family Banking Management"],
   },
   {
     icon: Users,
     title: "Community Finance",
+    image: communityImg,
     items: ["Digital Vicoba (Microfinance)", "Book Lending Management"],
   },
   {
     icon: Shield,
     title: "Governance & Operations",
+    image: governanceImg,
     items: ["Touchless KYC", "Digital Onboarding", "Membership / Donation Mgmt"],
   },
   {
     icon: GraduationCap,
     title: "Educational Technology",
+    image: edtechImg,
     items: ["University E-learning", "Professional Certifications"],
   },
   {
     icon: Wifi,
     title: "Smart Infrastructure & Security",
+    image: infrastructureImg,
     items: ["IoT Smart Water/Gas Metering", "Cyber Security Systems & Training"],
   },
 ];
@@ -80,15 +92,25 @@ const Technology = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass-card p-8"
+              className="glass-card overflow-hidden flex flex-col"
             >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-11 h-11 rounded-lg bg-primary/15 flex items-center justify-center">
-                  <g.icon size={20} className="text-primary" />
+              <div className="relative h-40 overflow-hidden">
+                <img
+                  src={g.image}
+                  alt={g.title}
+                  loading="lazy"
+                  width={800}
+                  height={512}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                <div className="absolute bottom-3 left-3 w-11 h-11 rounded-lg bg-primary/90 backdrop-blur flex items-center justify-center shadow-[0_0_24px_hsl(var(--primary)/0.5)]">
+                  <g.icon size={20} className="text-primary-foreground" />
                 </div>
-                <h3 className="font-display text-lg font-bold">{g.title}</h3>
               </div>
-              <ul className="space-y-2">
+              <div className="p-6 flex-1">
+                <h3 className="font-display text-lg font-bold mb-4">{g.title}</h3>
+                <ul className="space-y-2">
                 {g.items.map((it) => (
                   <li key={it} className="flex items-start gap-2 text-sm text-foreground/85">
                     <span className="text-foreground/70 mt-1" aria-hidden="true">▸</span>
@@ -96,6 +118,7 @@ const Technology = () => {
                   </li>
                 ))}
               </ul>
+              </div>
             </motion.div>
           ))}
         </div>
