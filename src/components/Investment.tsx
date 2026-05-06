@@ -1,22 +1,28 @@
 import { motion } from "framer-motion";
 import { Coins, FileText, Globe2 } from "lucide-react";
 import marketsImg from "@/assets/markets.jpg";
+import equityImg from "@/assets/inv-equity.jpg";
+import ipImg from "@/assets/inv-ip.jpg";
+import diversifiedImg from "@/assets/inv-diversified.jpg";
 import Marquee from "./Marquee";
 
 const items = [
   {
     icon: Coins,
     title: "Equity & Funds",
+    image: equityImg,
     desc: "Active participation in Venture Capital (VC) and Private Equity (PE) within high-growth sectors across multiple regions.",
   },
   {
     icon: FileText,
     title: "IPs & Royalties",
+    image: ipImg,
     desc: "Professional management of intellectual property portfolios and generating solution-based royalty streams.",
   },
   {
     icon: Globe2,
     title: "Diversified Assets",
+    image: diversifiedImg,
     desc: "Comprehensive management of funds, shares, and life insurance assets across multiple global jurisdictions.",
   },
 ];
@@ -101,13 +107,26 @@ const Investment = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass-card p-10"
+              className="glass-card overflow-hidden flex flex-col"
             >
-              <div className="w-14 h-14 rounded-xl glass flex items-center justify-center mb-6">
-                <it.icon size={26} className="text-primary" />
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={it.image}
+                  alt={it.title}
+                  loading="lazy"
+                  width={800}
+                  height={512}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3 w-12 h-12 rounded-xl bg-primary/90 backdrop-blur flex items-center justify-center shadow-[0_0_24px_hsl(var(--primary)/0.5)]">
+                  <it.icon size={22} className="text-primary-foreground" />
+                </div>
               </div>
-              <h3 className="font-display text-2xl font-bold mb-4">{it.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{it.desc}</p>
+              <div className="p-8 flex-1">
+                <h3 className="font-display text-2xl font-bold mb-4">{it.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{it.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
