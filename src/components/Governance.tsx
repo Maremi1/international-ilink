@@ -92,7 +92,7 @@ const Governance = () => {
                   height={512}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-card/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/30 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 w-12 h-12 rounded-xl bg-primary/90 backdrop-blur flex items-center justify-center shadow-[0_0_24px_hsl(var(--primary)/0.5)]">
                   <it.icon size={22} className="text-primary-foreground" />
                 </div>
