@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import WorldMap from "./WorldMap";
+import visionImg from "@/assets/about-vision.jpg";
+import missionImg from "@/assets/about-mission.jpg";
+import philosophyImg from "@/assets/about-philosophy.jpg";
 
 const About = () => {
   return (
@@ -68,14 +71,17 @@ const About = () => {
           {[
             {
               title: "Our Vision",
+              image: visionImg,
               body: "To be the leading global hub for integrated investment and management, driving inclusive growth across both emerging and developed markets.",
             },
             {
               title: "Our Mission",
+              image: missionImg,
               body: "To provide world-class strategic oversight, operational support, and technical consultancy — empowering partners to deliver high-impact solutions in energy, technology, education and business development.",
             },
             {
               title: "Core Philosophy",
+              image: philosophyImg,
               body: "Institutional Excellence. We are committed to raising standards in every entity we touch, ensuring rigorous governance and sustainable value creation.",
             },
           ].map((c, i) => (
@@ -85,11 +91,24 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass-card p-8"
+              className="glass-card overflow-hidden flex flex-col"
             >
-              <div className="text-xs uppercase tracking-[0.2em] text-primary mb-3">0{i + 1}</div>
-              <h3 className="font-display text-2xl font-bold mb-4">{c.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{c.body}</p>
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.title}
+                  loading="lazy"
+                  width={1024}
+                  height={640}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-card/10 to-transparent" />
+              </div>
+              <div className="p-8">
+                <div className="text-xs uppercase tracking-[0.2em] text-primary mb-3">0{i + 1}</div>
+                <h3 className="font-display text-2xl font-bold mb-4">{c.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{c.body}</p>
+              </div>
             </motion.div>
           ))}
         </div>
