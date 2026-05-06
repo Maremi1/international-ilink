@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import WorldMap from "./WorldMap";
+import visionImg from "@/assets/about-vision.jpg";
+import missionImg from "@/assets/about-mission.jpg";
+import philosophyImg from "@/assets/about-philosophy.jpg";
 
 const About = () => {
   return (
