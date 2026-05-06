@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Scale, Globe, Handshake } from "lucide-react";
+import oversightImg from "@/assets/gov-oversight.jpg";
+import legalImg from "@/assets/gov-legal.jpg";
+import globalImg from "@/assets/gov-global.jpg";
+import partnerImg from "@/assets/gov-partner.jpg";
 
 const items = [
-  { icon: ShieldCheck, title: "Financial Oversight", desc: "Regulatory adherence for managed portfolios across jurisdictions." },
-  { icon: Scale, title: "Legal Expertise", desc: "International tax laws and commercial regulations." },
-  { icon: Globe, title: "Global Expansion", desc: "Structuring cross-border investments and franchising." },
-  { icon: Handshake, title: "Partner Onboarding", desc: "Seamless integration of international partners into our trust framework." },
+  { icon: ShieldCheck, title: "Financial Oversight", desc: "Regulatory adherence for managed portfolios across jurisdictions.", image: oversightImg },
+  { icon: Scale, title: "Legal Expertise", desc: "International tax laws and commercial regulations.", image: legalImg },
+  { icon: Globe, title: "Global Expansion", desc: "Structuring cross-border investments and franchising.", image: globalImg },
+  { icon: Handshake, title: "Partner Onboarding", desc: "Seamless integration of international partners into our trust framework.", image: partnerImg },
 ];
 
 const Governance = () => {
@@ -77,13 +81,26 @@ const Governance = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass-card p-8 text-center"
+              className="glass-card overflow-hidden flex flex-col"
             >
-              <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-5">
-                <it.icon size={24} className="text-primary-foreground" />
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={it.image}
+                  alt={it.title}
+                  loading="lazy"
+                  width={800}
+                  height={512}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-card/10 to-transparent" />
+                <div className="absolute bottom-3 left-3 w-12 h-12 rounded-xl bg-primary/90 backdrop-blur flex items-center justify-center shadow-[0_0_24px_hsl(var(--primary)/0.5)]">
+                  <it.icon size={22} className="text-primary-foreground" />
+                </div>
               </div>
-              <h3 className="font-display text-lg font-bold mb-3">{it.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
+              <div className="p-6 flex-1">
+                <h3 className="font-display text-lg font-bold mb-3">{it.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
