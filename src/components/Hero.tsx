@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroImg from "@/assets/hero-globe.jpg";
 import heroVideo from "@/assets/hero-loop.mp4.asset.json";
