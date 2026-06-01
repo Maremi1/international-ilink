@@ -34,7 +34,7 @@ const Academy = () => {
           viewport={{ once: true }}
           className="max-w-3xl mb-16"
         >
-          <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Pillar 02 · Human Capital</div>
+          <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Pillar 03 · Human Capital</div>
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
             iLink Academy: Accelerating <span className="text-gradient">Human Capital</span>
           </h2>
