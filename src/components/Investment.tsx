@@ -50,7 +50,7 @@ const Investment = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Pillar 03</div>
+            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Pillar 02</div>
             <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Strategic Investment & <span className="text-gradient">Partnership</span>
             </h2>
