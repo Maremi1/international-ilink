@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Heart, HandHeart, Leaf } from "lucide-react";
+import { Heart, HandHeart, Leaf, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import foundationImg from "@/assets/foundation.jpg";
 
 const Foundation = () => {
@@ -56,6 +57,14 @@ const Foundation = () => {
                 </div>
               ))}
             </div>
+
+            <Link
+              to="/foundation"
+              className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
+            >
+              Learn More
+              <ArrowRight size={18} />
+            </Link>
           </motion.div>
         </div>
       </div>
