@@ -93,7 +93,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="glass-card overflow-hidden flex flex-col"
             >
-              <div className="relative h-44 overflow-hidden">
+              <div className="relative h-64 md:h-72 overflow-hidden">
                 <img
                   src={c.image}
                   alt={c.title}
