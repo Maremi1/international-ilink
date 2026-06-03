@@ -22,6 +22,9 @@ import heroImg from "@/assets/expert-hero.jpg";
 import governanceImg from "@/assets/expert-governance.jpg";
 import digitalImg from "@/assets/expert-digital.jpg";
 import infrastructureImg from "@/assets/expert-infrastructure.jpg";
+import evaluationImg from "@/assets/expert-evaluation.jpg";
+import remoteImg from "@/assets/expert-remote.jpg";
+import consciousImg from "@/assets/expert-conscious.jpg";
 
 const tiers = [
   { icon: Globe2, title: "Tier 1 · Strategic", role: "Board Representation & Advisory", profile: "Former C-Suite, Industry Veterans" },
