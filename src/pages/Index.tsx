@@ -9,6 +9,7 @@ import Academy from "@/components/Academy";
 import Technology from "@/components/Technology";
 import Governance from "@/components/Governance";
 import Foundation from "@/components/Foundation";
+import ExpertCall from "@/components/ExpertCall";
 import Benefits from "@/components/Benefits";
 import Partners from "@/components/Partners";
 import Engagement from "@/components/Engagement";
@@ -29,6 +30,7 @@ const Index = () => {
       <Technology />
       <Governance />
       <Foundation />
+      <ExpertCall />
       <Benefits />
       <Partners />
       <Engagement />
