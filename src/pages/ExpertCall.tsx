@@ -243,24 +243,42 @@ const ExpertCallPage = () => {
       {/* Evaluation Rubric */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-center">
-              Integrated Evaluation <span className="text-gradient">Rubric</span>
-            </h2>
-            <p className="text-muted-foreground text-center mb-10">The filter for applicant selection</p>
-            <div className="space-y-4">
-              {rubric.map((r) => (
-                <div key={r.label} className="glass rounded-xl p-5">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-medium">{r.label}</span>
-                    <span className="font-display font-bold text-gradient">{r.value}</span>
+          <div className="grid lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="glass-card overflow-hidden order-last lg:order-first"
+            >
+              <img
+                src={evaluationImg}
+                alt="African experts reviewing data in a boardroom evaluation session"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                width={1280}
+                height={832}
+              />
+            </motion.div>
+            <div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-center lg:text-left">
+                Integrated Evaluation <span className="text-gradient">Rubric</span>
+              </h2>
+              <p className="text-muted-foreground text-center lg:text-left mb-10">The filter for applicant selection</p>
+              <div className="space-y-4">
+                {rubric.map((r) => (
+                  <div key={r.label} className="glass rounded-xl p-5">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium">{r.label}</span>
+                      <span className="font-display font-bold text-gradient">{r.value}</span>
+                    </div>
+                    <div className="h-2 rounded-full bg-primary/10 overflow-hidden">
+                      <div className="h-full bg-primary rounded-full" style={{ width: r.value }} />
+                    </div>
+                    {r.note && <p className="text-xs text-muted-foreground mt-2">{r.note}</p>}
                   </div>
-                  <div className="h-2 rounded-full bg-primary/10 overflow-hidden">
-                    <div className="h-full bg-primary rounded-full" style={{ width: r.value }} />
-                  </div>
-                  {r.note && <p className="text-xs text-muted-foreground mt-2">{r.note}</p>}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -269,21 +287,31 @@ const ExpertCallPage = () => {
       {/* Digital Consultant Requirements */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="glass-card p-8 md:p-12 max-w-5xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-center">
-              The Modern Digital Consultant
-            </h2>
-            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-              Digital proficiency is not optional in a borderless economy. We require consultants
-              who can operate without physical boundaries.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {digitalReqs.map((d) => (
-                <div key={d.label} className="glass rounded-2xl p-6 text-center">
-                  <d.icon size={28} className="text-primary mx-auto mb-3" />
-                  <p className="text-sm font-medium">{d.label}</p>
-                </div>
-              ))}
+          <div className="glass-card overflow-hidden max-w-5xl mx-auto">
+            <img
+              src={remoteImg}
+              alt="African consultant working remotely with holographic data dashboards"
+              className="w-full h-56 md:h-72 object-cover"
+              loading="lazy"
+              width={1280}
+              height={832}
+            />
+            <div className="p-8 md:p-12">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-center">
+                The Modern Digital Consultant
+              </h2>
+              <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+                Digital proficiency is not optional in a borderless economy. We require consultants
+                who can operate without physical boundaries.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {digitalReqs.map((d) => (
+                  <div key={d.label} className="glass rounded-2xl p-6 text-center">
+                    <d.icon size={28} className="text-primary mx-auto mb-3" />
+                    <p className="text-sm font-medium">{d.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -292,20 +320,31 @@ const ExpertCallPage = () => {
       {/* Conscious Capital */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto text-center">
-            <HeartHandshake size={32} className="text-primary mx-auto mb-4" />
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Conscious Capital: Profit for Purpose
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              iLink International directs a portion of profits toward the objectives of Mama Mia's
-              Foundation — Economic Empowerment, Humanitarian Support, and Community Resilience.
-              We seek consultants who understand that commercial success must drive global
-              humanitarian resilience.
-            </p>
+          <div className="glass-card overflow-hidden max-w-5xl mx-auto grid lg:grid-cols-2 items-stretch">
+            <img
+              src={consciousImg}
+              alt="African community joining hands in unity and empowerment"
+              className="w-full h-full min-h-[260px] object-cover"
+              loading="lazy"
+              width={1280}
+              height={832}
+            />
+            <div className="p-8 md:p-12 text-center lg:text-left flex flex-col justify-center">
+              <HeartHandshake size={32} className="text-primary mx-auto lg:mx-0 mb-4" />
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                Conscious Capital: Profit for Purpose
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                iLink International directs a portion of profits toward the objectives of Mama Mia's
+                Foundation — Economic Empowerment, Humanitarian Support, and Community Resilience.
+                We seek consultants who understand that commercial success must drive global
+                humanitarian resilience.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Submission Checklist */}
       <section className="py-12 md:py-16">
