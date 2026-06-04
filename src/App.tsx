@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index.tsx";
 import FoundationPage from "./pages/Foundation.tsx";
 import ExpertCallPage from "./pages/ExpertCall.tsx";
+import SokoFranchisePage from "./pages/SokoFranchise.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/foundation" element={<FoundationPage />} />
             <Route path="/expert-call" element={<ExpertCallPage />} />
+            <Route path="/soko-franchise" element={<SokoFranchisePage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
