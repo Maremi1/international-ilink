@@ -11,6 +11,7 @@ import Governance from "@/components/Governance";
 import Foundation from "@/components/Foundation";
 import ExpertCall from "@/components/ExpertCall";
 import SokoFranchise from "@/components/SokoFranchise";
+import Scorecard from "@/components/Scorecard";
 import Benefits from "@/components/Benefits";
 import Partners from "@/components/Partners";
 import Engagement from "@/components/Engagement";
@@ -33,6 +34,7 @@ const Index = () => {
       <Foundation />
       <ExpertCall />
       <SokoFranchise />
+      <Scorecard />
       <Benefits />
       <Partners />
       <Engagement />
