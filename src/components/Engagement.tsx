@@ -64,7 +64,7 @@ const Engagement = () => {
                   height={512}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/30 via-transparent to-transparent" />
               </div>
               <div className="p-10 -mt-10 relative">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-xl">
