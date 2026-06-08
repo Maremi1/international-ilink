@@ -93,7 +93,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="glass-card overflow-hidden flex flex-col"
             >
-              <div className="relative h-44 overflow-hidden">
+              <div className="relative h-60 overflow-hidden">
                 <img
                   src={c.image}
                   alt={c.title}
@@ -102,11 +102,13 @@ const About = () => {
                   height={640}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute bottom-4 left-5 right-5">
+                  <div className="text-xs uppercase tracking-[0.2em] text-primary mb-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">0{i + 1}</div>
+                  <h3 className="font-display text-2xl font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">{c.title}</h3>
+                </div>
               </div>
-              <div className="p-8">
-                <div className="text-xs uppercase tracking-[0.2em] text-primary mb-3">0{i + 1}</div>
-                <h3 className="font-display text-2xl font-bold mb-4">{c.title}</h3>
+              <div className="p-5">
                 <p className="text-muted-foreground leading-relaxed">{c.body}</p>
               </div>
             </motion.div>
