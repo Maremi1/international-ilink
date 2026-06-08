@@ -75,7 +75,7 @@ const Investment = () => {
               height={896}
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-card/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-card/25 via-transparent to-transparent pointer-events-none" />
           </motion.div>
         </div>
 

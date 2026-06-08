@@ -102,7 +102,7 @@ const About = () => {
                   height={640}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-card/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/30 via-transparent to-transparent" />
               </div>
               <div className="p-8">
                 <div className="text-xs uppercase tracking-[0.2em] text-primary mb-3">0{i + 1}</div>
