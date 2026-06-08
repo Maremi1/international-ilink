@@ -72,7 +72,7 @@ const Ecosystem = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="glass-card group cursor-pointer relative overflow-hidden flex flex-col"
             >
-              <div className="relative h-32 overflow-hidden">
+              <div className="relative h-52 overflow-hidden">
                 <img
                   src={p.img}
                   alt=""
@@ -81,15 +81,15 @@ const Ecosystem = () => {
                   height={512}
                   className="w-full h-full object-cover opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute bottom-3 left-4 w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                  <p.icon size={24} className="text-primary-foreground" />
+                </div>
               </div>
               <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-primary/10 blur-2xl group-hover:bg-primary/20 transition-all" />
-              <div className="relative p-8 -mt-8">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
-                  <p.icon size={26} className="text-primary-foreground" />
-                </div>
-                <div className="text-xs uppercase tracking-wider text-primary mb-2">0{i + 1} · {p.subtitle}</div>
-                <h3 className="font-display text-2xl font-bold mb-3">{p.title}</h3>
+              <div className="relative p-5">
+                <div className="text-xs uppercase tracking-wider text-primary mb-1.5">0{i + 1} · {p.subtitle}</div>
+                <h3 className="font-display text-xl font-bold mb-2">{p.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             </motion.a>
