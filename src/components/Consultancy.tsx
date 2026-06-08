@@ -52,10 +52,10 @@ const Consultancy = () => {
             height={896}
             className="w-full h-[280px] md:h-[400px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card/40 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-2 drop-shadow-[0_1px_2px_hsl(var(--background)/0.6)]">Strategic Advisory</div>
-            <p className="font-display text-xl md:text-2xl font-semibold max-w-2xl text-card-foreground drop-shadow-[0_1px_2px_hsl(var(--background)/0.5)]">
+            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">Strategic Advisory</div>
+            <p className="font-display text-xl md:text-2xl font-semibold max-w-2xl text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
               From the boardroom to the market — tactical execution for institutional growth.
             </p>
           </div>
