@@ -102,7 +102,7 @@ const About = () => {
                   height={640}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-5 right-5">
                   <div className="text-xs uppercase tracking-[0.2em] text-primary mb-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">0{i + 1}</div>
                   <h3 className="font-display text-2xl font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">{c.title}</h3>
