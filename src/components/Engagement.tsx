@@ -53,9 +53,9 @@ const Engagement = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="glass-card group overflow-hidden flex flex-col"
+              className="glass-card group relative overflow-hidden flex flex-col"
             >
-              <div className="relative h-44 overflow-hidden">
+              <div className="relative h-60 overflow-hidden">
                 <img
                   src={m.img}
                   alt={m.title}
@@ -64,14 +64,16 @@ const Engagement = () => {
                   height={512}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/30 via-transparent to-transparent" />
-              </div>
-              <div className="p-10 -mt-10 relative">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-xl">
-                  <m.icon size={28} className="text-primary-foreground" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute bottom-3 left-4 flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                    <m.icon size={24} className="text-primary-foreground" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold drop-shadow">{m.title}</h3>
                 </div>
-                <h3 className="font-display text-2xl font-bold mb-5">{m.title}</h3>
-                <ul className="space-y-3">
+              </div>
+              <div className="relative p-5">
+                <ul className="space-y-2.5">
                   {m.items.map((it) => (
                     <li key={it} className="flex items-start gap-3 text-muted-foreground">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
