@@ -63,15 +63,15 @@ const Academy = () => {
                   height={672}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
                 <div className="absolute top-4 right-4 font-display text-5xl font-bold text-primary/70 group-hover:text-primary transition-colors drop-shadow-[0_2px_4px_hsl(var(--background)/0.5)]">
                   {p.n}
                 </div>
+                <h3 className="absolute bottom-3 left-5 font-display text-2xl font-bold drop-shadow">{p.title}</h3>
               </div>
-              <div className="relative p-8 py-[32px]">
-                <div className="text-xs uppercase tracking-wider text-primary mb-3">Program {p.n}</div>
-                <h3 className="font-display text-2xl font-bold mb-4">{p.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
+              <div className="relative p-5">
+                <div className="text-xs uppercase tracking-wider text-primary mb-2">Program {p.n}</div>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             </motion.div>
           ))}
