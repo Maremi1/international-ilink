@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Ecosystem from "@/components/Ecosystem";
@@ -21,6 +22,10 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      <SEO 
+        title="iLink International | Bridging Capital, Innovation & Global Markets"
+        description="iLink International — your strategic gateway to sustainable economic growth. Consultancy, investment, iLink Academy and proprietary digital platforms across Africa and beyond."
+      />
       <Navbar />
       <Hero />
       <About />

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import logo from "@/assets/ilink-logo.png";
 import ThemeToggle from "./ThemeToggle";
 
@@ -18,6 +19,8 @@ const links = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -36,7 +39,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className={`glass-strong rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between transition-all`}>
-          <a href="#top" className="flex items-center gap-3 group">
+          <a href={isHome ? "#top" : "/"} className="flex items-center gap-3 group">
             <img src={logo} alt="iLink International" className="h-10 w-auto" width={40} height={40} />
           </a>
 
@@ -44,7 +47,7 @@ const Navbar = () => {
             {links.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={isHome ? l.href : `/${l.href}`}
                 className="px-3 py-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-primary/5"
               >
                 {l.label}
@@ -55,7 +58,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <a
-              href="#contact"
+              href={isHome ? "#contact" : "/#contact"}
               className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium text-sm hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
             >
               Partner With Us
@@ -82,7 +85,7 @@ const Navbar = () => {
               {links.map((l) => (
                 <a
                   key={l.href}
-                  href={l.href}
+                  href={isHome ? l.href : `/${l.href}`}
                   onClick={() => setOpen(false)}
                   className="px-3 py-3 rounded-lg hover:bg-primary/10 text-muted-foreground hover:text-primary"
                 >

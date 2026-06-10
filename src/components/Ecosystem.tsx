@@ -81,7 +81,7 @@ const Ecosystem = () => {
                   height={512}
                   className="w-full h-full object-cover opacity-100 group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-3 left-4 w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                   <p.icon size={24} className="text-primary-foreground" />
                 </div>

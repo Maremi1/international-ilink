@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroImg from "@/assets/hero-globe.jpg";
-import heroVideo from "@/assets/hero-loop.mp4.asset.json";
+import heroVideo from "@/assets/hero-loop.mp4";
 
 const Hero = () => {
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         {!reduceMotion ? (
           <video
-            src={heroVideo.url}
+            src={heroVideo}
             poster={heroImg}
             autoPlay
             muted

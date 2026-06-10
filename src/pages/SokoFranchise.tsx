@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import heroImg from "@/assets/soko-hero.jpg";
 import marketImg from "@/assets/soko-market.jpg";
 import partnerImg from "@/assets/soko-partner.jpg";
@@ -98,6 +99,11 @@ const scorecard = [
 const SokoFranchisePage = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Soko Franchise Sub-Network | iLink International"
+        description="Expand the Soko platform across Africa by becoming a franchise partner. Manage regional business networks, verified accounts, and dispute resolution."
+        canonicalUrl="/soko-franchise"
+      />
       <Navbar />
 
       {/* Hero */}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Heart, HandHeart, Leaf, Sprout, Globe, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import heroImg from "@/assets/foundation-hero.jpg";
 import empowermentImg from "@/assets/foundation-empowerment.jpg";
 import humanitarianImg from "@/assets/foundation-humanitarian.jpg";
@@ -38,6 +39,11 @@ const stats = [
 const Foundation = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Mama Mia's Foundation | iLink International"
+        description="Mama Mia's Foundation is the philanthropic heart of iLink International, creating sustainable mechanisms for socio-economic empowerment and humanitarian support."
+        canonicalUrl="/foundation"
+      />
       <Navbar />
 
       {/* Hero */}

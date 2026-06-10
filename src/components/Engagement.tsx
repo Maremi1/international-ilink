@@ -64,12 +64,12 @@ const Engagement = () => {
                   height={512}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-3 left-4 flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                     <m.icon size={24} className="text-primary-foreground" />
                   </div>
-                  <h3 className="font-display text-xl font-bold drop-shadow">{m.title}</h3>
+                  <h3 className="font-display text-xl font-bold drop-shadow text-white">{m.title}</h3>
                 </div>
               </div>
               <div className="relative p-5">

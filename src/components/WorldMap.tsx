@@ -68,16 +68,16 @@ const WorldMap = () => {
                   height={800}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-primary mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+                  <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-white mb-2 drop-shadow-sm">
                     <MapPin size={14} />
                     {hub.country}
                   </div>
-                  <div className="font-display text-2xl md:text-3xl font-bold leading-tight">
+                  <div className="font-display text-2xl md:text-3xl font-bold leading-tight drop-shadow-md">
                     {hub.label}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">{hub.sub}</div>
+                  <div className="text-sm text-white/80 mt-1 drop-shadow-sm">{hub.sub}</div>
                 </div>
               </div>
             </CarouselItem>

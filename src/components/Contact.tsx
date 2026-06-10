@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Globe, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Globe, MapPin, ArrowRight, MessageCircle } from "lucide-react";
 import logo from "@/assets/ilink-logo.png";
 
 const Contact = () => {
@@ -43,6 +43,15 @@ const Contact = () => {
             >
               <Globe size={18} />
               www.ilinkbiz.com
+            </a>
+            <a
+              href="https://wa.me/255765658595?text=Hello%20iLink%20International!%20I%20would%20like%20to%20learn%20more%20about%20partnering%20with%20you."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#25D366] text-white font-semibold hover:bg-[#128C7E] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] transition-all"
+            >
+              <MessageCircle size={18} />
+              WhatsApp
             </a>
           </div>
 

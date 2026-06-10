@@ -61,7 +61,7 @@ const CaseStudy = () => {
               <AspectRatio ratio={16 / 9} className="rounded-xl overflow-hidden bg-muted">
                 {load ? (
                   <iframe
-                    src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+                    src="https://www.youtube-nocookie.com/embed/41wXVemBxIY?rel=0&modestbranding=1"
                     title="iLink International — Case Study"
                     loading="lazy"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

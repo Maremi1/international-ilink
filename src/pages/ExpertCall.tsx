@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import heroImg from "@/assets/expert-hero.jpg";
 import governanceImg from "@/assets/expert-governance.jpg";
 import digitalImg from "@/assets/expert-digital.jpg";
@@ -109,6 +110,11 @@ const checklist = [
 const ExpertCallPage = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      <SEO 
+        title="Expert Call Network | iLink International"
+        description="Join the iLink Expert Call Network to offer your specialized knowledge to global clients, governments, and corporations."
+        canonicalUrl="/expert-call"
+      />
       <Navbar />
 
       {/* Hero */}

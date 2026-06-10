@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import heroImg from "@/assets/scorecard-hero.jpg";
 import financialImg from "@/assets/scorecard-financial.jpg";
 import operationsImg from "@/assets/scorecard-operations.jpg";
@@ -79,6 +80,11 @@ const docs = [
 const ScorecardPage = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      <SEO 
+        title="11-Point Scorecard Verification | iLink International"
+        description="Become an operator for iLink's 11-Point Scorecard Verification process. Verify suppliers, buyers, and businesses for global standards compliance."
+        canonicalUrl="/scorecard"
+      />
       <Navbar />
 
       {/* Hero */}
