@@ -14,25 +14,36 @@ const Scorecard = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
-              Official Franchise Selection Scorecard · iLink Limited
+            <div className="text-xs tracking-[0.3em] text-primary mb-4">
+              OFFICIAL FRANCHISE SELECTION SCORECARD · i Link Limited
             </div>
             <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Clear the <span className="text-gradient">75% Threshold</span> to Qualify
+              Clear the <span className="text-gradient">75% Threshold</span> to
+              Qualify
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              The iLink Executive Board uses a standardized, proprietary scorecard to objectively
-              evaluate every applicant for Exclusive Country Franchise rights. A minimum aggregate
-              score of 75/100 is required to pass the audit and secure a "Go" decision.
+              The i Link Executive Board uses a standardized, proprietary
+              scorecard to objectively evaluate every applicant for Exclusive
+              Country Franchise rights. A minimum aggregate score of 75/100 is
+              required to pass the audit and secure a "Go" decision.
             </p>
 
             <div className="space-y-3">
               {[
-                { icon: ClipboardCheck, label: "Four weighted capability pillars (100 pts)" },
-                { icon: ShieldCheck, label: "Financial, operational, technical & strategic audit" },
+                {
+                  icon: ClipboardCheck,
+                  label: "Four weighted capability pillars (100 pts)",
+                },
+                {
+                  icon: ShieldCheck,
+                  label: "Financial, operational, technical & strategic audit",
+                },
                 { icon: Target, label: "Four definitive executive outcomes" },
               ].map((it) => (
-                <div key={it.label} className="glass rounded-xl p-4 flex items-center gap-4">
+                <div
+                  key={it.label}
+                  className="glass rounded-xl p-4 flex items-center gap-4"
+                >
                   <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
                     <it.icon size={18} className="text-primary" />
                   </div>
@@ -59,7 +70,7 @@ const Scorecard = () => {
           >
             <img
               src={scorecardHero}
-              alt="iLink executive board evaluating franchise applicants with a scorecard"
+              alt="i Link executive board evaluating franchise applicants with a scorecard"
               className="w-full h-auto"
               loading="lazy"
               width={1536}

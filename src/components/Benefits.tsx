@@ -6,7 +6,7 @@ import { useCountUp } from "@/hooks/use-count-up";
 
 const benefits = [
   { title: "Consultancy Excellence", desc: "Access top-tier expertise for business development and corporate restructuring." },
-  { title: "Workforce Empowerment", desc: "Leverage iLink Academy to upskill teams in leadership and digital transformation." },
+  { title: "Workforce Empowerment", desc: "Leverage i Link Academy to upskill teams in leadership and digital transformation." },
   { title: "Technology Integration", desc: "Deploy robust, ready-made platforms (AI Scoring, Smart Metering) to modernize operations." },
   { title: "Strategic Growth", desc: "Access equity partnerships, IP sharing, and international fund investments." },
 ];
@@ -43,10 +43,10 @@ const Benefits = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Why iLink</div>
+          <div className="text-xs tracking-[0.3em] text-primary mb-4">WHY i Link</div>
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Unlock Global Opportunities<br />
-            <span className="text-gradient">With iLink</span>
+            <span className="text-gradient">With i Link</span>
           </h2>
         </motion.div>
 

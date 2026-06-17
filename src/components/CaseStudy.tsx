@@ -36,7 +36,7 @@ const CaseStudy = () => {
           >
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Case Study</div>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              See iLink in <span className="text-gradient">Action</span>
+              See i Link in <span className="text-gradient">Action</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Watch how our integrated ecosystem turns capital, expertise and technology into
@@ -62,7 +62,7 @@ const CaseStudy = () => {
                 {load ? (
                   <iframe
                     src="https://www.youtube-nocookie.com/embed/41wXVemBxIY?rel=0&modestbranding=1"
-                    title="iLink International — Case Study"
+                    title="i Link International — Case Study"
                     loading="lazy"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

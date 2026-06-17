@@ -15,6 +15,7 @@ import {
   BarChart3,
   Cloud,
   HeartHandshake,
+  Download,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -60,14 +61,14 @@ const pillars = [
   },
   {
     icon: GraduationCap,
-    title: "Pillar III · Human Capital & iLink Academy",
+    title: "Pillar III · Human Capital & i Link Academy",
     subtitle: "For the Transformers of Talent",
     image: infrastructureImg,
     points: [
       "Leadership Transformation — emotional intelligence and agile management",
       "Sales Excellence — high-performance strategies for international teams",
       "Digital Transformation Training — bridging the skills gap for the 4IR",
-      "Flagship Vehicle — iLink Academy",
+      "Flagship Vehicle — i Link Academy",
     ],
   },
   {
@@ -111,8 +112,8 @@ const ExpertCallPage = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
       <SEO 
-        title="Expert Call Network | iLink International"
-        description="Join the iLink Expert Call Network to offer your specialized knowledge to global clients, governments, and corporations."
+        title="Expert Call Network | i Link International"
+        description="Join the i Link Expert Call Network to offer your specialized knowledge to global clients, governments, and corporations."
         canonicalUrl="/expert-call"
       />
       <Navbar />
@@ -140,7 +141,7 @@ const ExpertCallPage = () => {
                 The Global <span className="text-gradient">Expert Directory</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                iLink International — the strategic arm of iLink Global Holding Company — invites
+                i Link International — the strategic arm of i Link Global Holding Company — invites
                 elite talent to join its Strategic Expert Pool and Global Consultancy Network.
                 We support our subsidiaries through board-level advisory, technical
                 implementation, and corporate transformations.
@@ -341,7 +342,7 @@ const ExpertCallPage = () => {
                 Conscious Capital: Profit for Purpose
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                iLink International directs a portion of profits toward the objectives of Mama Mia's
+                i Link International directs a portion of profits toward the objectives of Mama Mia's
                 Foundation — Economic Empowerment, Humanitarian Support, and Community Resilience.
                 We seek consultants who understand that commercial success must drive global
                 humanitarian resilience.
@@ -394,6 +395,35 @@ const ExpertCallPage = () => {
               <Mail size={18} /> info@ilinkbiz.com
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Download Section */}
+      <section className="py-12 mb-12">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto glass-strong rounded-3xl p-8 md:p-12 border border-primary/20"
+          >
+            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <Download size={32} className="text-primary" />
+            </div>
+            <h3 className="font-display text-3xl font-bold mb-4">Global Strategic Expert Call</h3>
+            <p className="text-lg text-muted-foreground mb-8">
+              Users can freely download our comprehensive document for full details on the Expression of Interest, thematic pillars, and expert requirements.
+            </p>
+            <a
+              href="/Global_Strategic_Expert_Call.pdf"
+              download
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-primary/25"
+            >
+              <Download size={20} />
+              Download Document (PDF)
+            </a>
+          </motion.div>
         </div>
       </section>
 

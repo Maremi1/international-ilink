@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className={`glass-strong rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between transition-all`}>
           <a href={isHome ? "#top" : "/"} className="flex items-center gap-3 group">
-            <img src={logo} alt="iLink International" className="h-10 w-auto" width={40} height={40} />
+            <img src={logo} alt="i Link International" className="h-10 w-auto" width={40} height={40} />
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">

@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   Mail,
   TrendingUp,
+  Download,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -24,7 +25,7 @@ import logisticsImg from "@/assets/soko-logistics.jpg";
 const network = [
   {
     icon: Layers,
-    title: "iLink Limited",
+    title: "i Link Limited",
     text: "The master franchisor. Provides the turnkey Soko tech stack and ensures global maintenance.",
   },
   {
@@ -61,9 +62,27 @@ const tiers = [
 ];
 
 const profits = [
-  { cat: "Category A · Large Market", gtv: "$5,000,000", rev: "$340,000", opex: "$100,000", net: "$240,000" },
-  { cat: "Category B · Mid Market", gtv: "$2,000,000", rev: "$140,000", opex: "$60,000", net: "$80,000" },
-  { cat: "Category C · Focused Market", gtv: "$500,000", rev: "$40,000", opex: "$20,000", net: "$20,000" },
+  {
+    cat: "Category A · Large Market",
+    gtv: "$5,000,000",
+    rev: "$340,000",
+    opex: "$100,000",
+    net: "$240,000",
+  },
+  {
+    cat: "Category B · Mid Market",
+    gtv: "$2,000,000",
+    rev: "$140,000",
+    opex: "$60,000",
+    net: "$80,000",
+  },
+  {
+    cat: "Category C · Focused Market",
+    gtv: "$500,000",
+    rev: "$40,000",
+    opex: "$20,000",
+    net: "$20,000",
+  },
 ];
 
 const capabilities = [
@@ -90,17 +109,29 @@ const capabilities = [
 ];
 
 const scorecard = [
-  { title: "Company Profile", text: "Demonstrated expertise in retail, logistics, or fintech sectors." },
-  { title: "Proof of Capital", text: "Validated bank reference confirming liquidity for the fee and OpEx reserve." },
-  { title: "Market Entry Plan", text: "An actionable roadmap to achieving 1% user penetration in Year 1." },
-  { title: "Legal Standing", text: "Certificate of Incorporation and current Tax Clearance in the target country." },
+  {
+    title: "Company Profile",
+    text: "Demonstrated expertise in retail, logistics, or fintech sectors.",
+  },
+  {
+    title: "Proof of Capital",
+    text: "Validated bank reference confirming liquidity for the fee and OpEx reserve.",
+  },
+  {
+    title: "Market Entry Plan",
+    text: "An actionable roadmap to achieving 1% user penetration in Year 1.",
+  },
+  {
+    title: "Legal Standing",
+    text: "Certificate of Incorporation and current Tax Clearance in the target country.",
+  },
 ];
 
 const SokoFranchisePage = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
-      <SEO 
-        title="Soko Franchise Sub-Network | iLink International"
+      <SEO
+        title="Soko Franchise Sub-Network | i Link International"
         description="Expand the Soko platform across Africa by becoming a franchise partner. Manage regional business networks, verified accounts, and dispute resolution."
         canonicalUrl="/soko-franchise"
       />
@@ -126,16 +157,19 @@ const SokoFranchisePage = () => {
                 Mama Mia's Soko · Global Franchise Prospectus
               </div>
               <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Global Tech. <span className="text-gradient">Village Roots.</span> National Prosperity.
+                Global Tech.{" "}
+                <span className="text-gradient">Village Roots.</span> National
+                Prosperity.
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Mama Mia's Soko is a premier, high-volume digital infrastructure platform designed
-                for rapid market penetration and community wealth distribution. We are seeking
-                Exclusive Country Franchise Partners to own and operate the Soko infrastructure
-                within sovereign borders.
+                Mama Mia's Soko is a premier, high-volume digital infrastructure
+                platform designed for rapid market penetration and community
+                wealth distribution. We are seeking Exclusive Country Franchise
+                Partners to own and operate the Soko infrastructure within
+                sovereign borders.
               </p>
               <p className="text-sm text-muted-foreground">
-                Powered by iLink Limited · Proprietary &amp; Confidential
+                Powered by i Link Limited · Proprietary &amp; Confidential
               </p>
             </motion.div>
 
@@ -176,7 +210,9 @@ const SokoFranchisePage = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-4">
                   <n.icon size={22} className="text-primary" />
                 </div>
-                <h3 className="font-display text-xl font-bold mb-2">{n.title}</h3>
+                <h3 className="font-display text-xl font-bold mb-2">
+                  {n.title}
+                </h3>
                 <p className="text-sm text-muted-foreground">{n.text}</p>
               </motion.div>
             ))}
@@ -206,18 +242,22 @@ const SokoFranchisePage = () => {
             </motion.div>
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Bridging Global Tech with <span className="text-gradient">Local Economies</span>
+                Bridging Global Tech with{" "}
+                <span className="text-gradient">Local Economies</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                The Soko platform delivers a turnkey tech stack, a globally recognised brand, and a
-                multi-currency ecosystem — built for community wealth distribution at scale.
+                The Soko platform delivers a turnkey tech stack, a globally
+                recognised brand, and a multi-currency ecosystem — built for
+                community wealth distribution at scale.
               </p>
               <div className="glass rounded-xl p-5 flex items-center gap-4">
                 <TrendingUp size={22} className="text-primary flex-shrink-0" />
                 <p className="text-sm">
-                  <span className="font-semibold">The 10% Gross Margin Revenue Engine:</span> every
-                  $10.00 purchase generates a $1.00 revenue pool across transactions, subscriptions,
-                  advertising and logistics.
+                  <span className="font-semibold">
+                    The 10% Gross Margin Revenue Engine:
+                  </span>{" "}
+                  every $10.00 purchase generates a $1.00 revenue pool across
+                  transactions, subscriptions, advertising and logistics.
                 </p>
               </div>
             </div>
@@ -229,11 +269,12 @@ const SokoFranchisePage = () => {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 text-center">
-            National Exclusivity <span className="text-gradient">Framework</span>
+            National Exclusivity{" "}
+            <span className="text-gradient">Framework</span>
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            One-time country franchise fee payable upon signing to secure sovereign territory and
-            initiate technical deployment.
+            One-time country franchise fee payable upon signing to secure
+            sovereign territory and initiate technical deployment.
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {tiers.map((t) => (
@@ -246,8 +287,12 @@ const SokoFranchisePage = () => {
                 className="glass-card p-8 text-center"
               >
                 <p className="text-primary text-sm font-medium mb-1">{t.cat}</p>
-                <p className="text-xs text-muted-foreground mb-4">Population: {t.pop}</p>
-                <div className="font-display text-4xl font-bold text-gradient mb-4">{t.fee}</div>
+                <p className="text-xs text-muted-foreground mb-4">
+                  Population: {t.pop}
+                </p>
+                <div className="font-display text-4xl font-bold text-gradient mb-4">
+                  {t.fee}
+                </div>
                 <p className="text-sm text-muted-foreground">{t.markets}</p>
               </motion.div>
             ))}
@@ -262,24 +307,44 @@ const SokoFranchisePage = () => {
             Year 1 Profitability <span className="text-gradient">Dynamics</span>
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Calculated at 1% market penetration, $10 monthly spend, and the 60/40 revenue split.
+            Calculated at 1% market penetration, $10 monthly spend, and the
+            60/40 revenue split.
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {profits.map((p) => (
               <div key={p.cat} className="glass-card p-6">
                 <h3 className="font-bold mb-4">{p.cat}</h3>
                 <div className="space-y-2 text-sm">
-                  <div className="flex justify-between"><span className="text-muted-foreground">Monthly GTV</span><span className="font-medium">{p.gtv}</span></div>
-                  <div className="flex justify-between"><span className="text-muted-foreground">Franchisee Rev</span><span className="font-medium">{p.rev}</span></div>
-                  <div className="flex justify-between"><span className="text-muted-foreground">Monthly OpEx</span><span className="font-medium">{p.opex}</span></div>
-                  <div className="flex justify-between border-t border-border pt-2 mt-2"><span className="font-semibold">Net Monthly Profit</span><span className="font-display font-bold text-gradient">{p.net}</span></div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Monthly GTV</span>
+                    <span className="font-medium">{p.gtv}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">
+                      Franchisee Rev
+                    </span>
+                    <span className="font-medium">{p.rev}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Monthly OpEx</span>
+                    <span className="font-medium">{p.opex}</span>
+                  </div>
+                  <div className="flex justify-between border-t border-border pt-2 mt-2">
+                    <span className="font-semibold">Net Monthly Profit</span>
+                    <span className="font-display font-bold text-gradient">
+                      {p.net}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-8">
-            <span className="font-semibold text-foreground">ROI Benchmark:</span> complete recoupment
-            of the one-time Franchise Fee in Month 1 of target achievement.
+            <span className="font-semibold text-foreground">
+              ROI Benchmark:
+            </span>{" "}
+            complete recoupment of the one-time Franchise Fee in Month 1 of
+            target achievement.
           </p>
         </div>
       </section>
@@ -294,7 +359,10 @@ const SokoFranchisePage = () => {
               </h2>
               <div className="space-y-5">
                 {capabilities.map((c) => (
-                  <div key={c.title} className="glass rounded-xl p-5 flex gap-4">
+                  <div
+                    key={c.title}
+                    className="glass rounded-xl p-5 flex gap-4"
+                  >
                     <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
                       <c.icon size={18} className="text-primary" />
                     </div>
@@ -333,12 +401,16 @@ const SokoFranchisePage = () => {
             The Selection Scorecard <span className="text-gradient">Audit</span>
           </h2>
           <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-            Mandatory documentation required for the Expression of Interest evaluation.
+            Mandatory documentation required for the Expression of Interest
+            evaluation.
           </p>
           <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
             {scorecard.map((s) => (
               <div key={s.title} className="glass rounded-xl p-6 flex gap-4">
-                <CheckCircle2 size={22} className="text-primary mt-0.5 flex-shrink-0" />
+                <CheckCircle2
+                  size={22}
+                  className="text-primary mt-0.5 flex-shrink-0"
+                />
                 <div>
                   <h3 className="font-bold mb-1">{s.title}</h3>
                   <p className="text-sm text-muted-foreground">{s.text}</p>
@@ -357,10 +429,12 @@ const SokoFranchisePage = () => {
               Secure Your National Exclusivity
             </h2>
             <p className="text-muted-foreground mb-2">
-              Submit your formal Statement of Capability to join the global Soko network.
+              Submit your formal Statement of Capability to join the global Soko
+              network.
             </p>
             <p className="text-sm text-muted-foreground mb-8">
-              Recipient: The Office of the CEO, iLink Limited · Subject: Franchise Expansion – [Your Country Name]
+              Recipient: The Office of the CEO, i Link Limited · Subject:
+              Franchise Expansion – [Your Country Name]
             </p>
             <a
               href="mailto:info@ilinkbiz.com?subject=Franchise%20Expansion%20%E2%80%93%20%5BYour%20Country%20Name%5D"
@@ -369,6 +443,39 @@ const SokoFranchisePage = () => {
               <Mail size={18} /> info@ilinkbiz.com
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Download Section */}
+      <section className="py-12 mb-12">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto glass-strong rounded-3xl p-8 md:p-12 border border-primary/20"
+          >
+            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <Download size={32} className="text-primary" />
+            </div>
+            <h3 className="font-display text-3xl font-bold mb-4">
+              Mama Mia's Soko Prospectus
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8">
+              Users can freely download our comprehensive Soko Global Franchise
+              Prospectus for full details on market entry, profitability
+              dynamics, and capability requirements.
+            </p>
+            <a
+              href="/Soko_Global_Franchise_Prospectus.pdf"
+              download
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-primary/25"
+            >
+              <Download size={20} />
+              Download Prospectus (PDF)
+            </a>
+          </motion.div>
         </div>
       </section>
 

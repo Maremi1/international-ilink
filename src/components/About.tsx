@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, Download } from "lucide-react";
 import WorldMap from "./WorldMap";
 import visionImg from "@/assets/about-vision.jpg";
 import missionImg from "@/assets/about-mission.jpg";
@@ -24,7 +24,7 @@ const About = () => {
               <span className="text-gradient">Management & Coordination</span> Firm
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I Link International is a diversified holding entity dedicated to catalyzing
+              i Link International is a diversified holding entity dedicated to catalyzing
               sustainable economic growth and institutional excellence. We serve as a critical
               bridge connecting international capital to emerging market opportunities,
               specializing in Market Systems Development (MSD), digital transformation, and
@@ -114,6 +114,31 @@ const About = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Company Profile Download */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 text-center max-w-3xl mx-auto glass-strong rounded-3xl p-8 md:p-12 border border-primary/20"
+        >
+          <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <Download size={32} className="text-primary" />
+          </div>
+          <h3 className="font-display text-3xl font-bold mb-4">i Link International Profile</h3>
+          <p className="text-lg text-muted-foreground mb-8">
+            Download our comprehensive company profile to learn more about our strategic pillars, global operations, and investment philosophy.
+          </p>
+          <a
+            href="/iLink_International_Strategic_Gateway.pdf"
+            download
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-primary/25"
+          >
+            <Download size={20} />
+            Download Profile (PDF)
+          </a>
+        </motion.div>
       </div>
     </section>
   );

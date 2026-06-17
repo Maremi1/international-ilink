@@ -24,7 +24,7 @@ const pillars = [
   },
   {
     icon: GraduationCap,
-    title: "iLink Academy",
+    title: "i Link Academy",
     subtitle: "Human Capital",
     desc: "Bridging the skills gap with leadership, digital and advanced sales training.",
     href: "#academy",
@@ -56,7 +56,7 @@ const Ecosystem = () => {
             An Integrated <span className="text-gradient">Operational Ecosystem</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            iLink International acts as a diversified holding and management entity across
+            i Link International acts as a diversified holding and management entity across
             four strategic pillars — fully aligned, fully integrated.
           </p>
         </motion.div>

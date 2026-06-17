@@ -23,8 +23,8 @@ const Index = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
       <SEO 
-        title="iLink International | Bridging Capital, Innovation & Global Markets"
-        description="iLink International — your strategic gateway to sustainable economic growth. Consultancy, investment, iLink Academy and proprietary digital platforms across Africa and beyond."
+        title="i Link International | Bridging Capital, Innovation & Global Markets"
+        description="i Link International — your strategic gateway to sustainable economic growth. Consultancy, investment, i Link Academy and proprietary digital platforms across Africa and beyond."
       />
       <Navbar />
       <Hero />

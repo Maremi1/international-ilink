@@ -15,14 +15,14 @@ const Contact = () => {
           transition={{ duration: 0.7 }}
           className="glass-strong rounded-3xl p-10 md:p-16 max-w-6xl mx-auto text-center relative overflow-hidden"
         >
-          <img src={logo} alt="iLink International logo" className="h-20 w-auto mx-auto mb-8 animate-float" width={80} height={80} />
+          <img src={logo} alt="i Link International logo" className="h-20 w-auto mx-auto mb-8 animate-float" width={80} height={80} />
 
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Get In Touch</div>
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Let's Build the <span className="text-gradient">Future Together</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            Partner with iLink International to unlock global opportunities, accelerate
+            Partner with i Link International to unlock global opportunities, accelerate
             growth, and shape the next chapter of sustainable economic transformation.
           </p>
 
@@ -45,7 +45,7 @@ const Contact = () => {
               www.ilinkbiz.com
             </a>
             <a
-              href="https://wa.me/255765658595?text=Hello%20iLink%20International!%20I%20would%20like%20to%20learn%20more%20about%20partnering%20with%20you."
+              href="https://wa.me/255765658595?text=Hello%20i%20Link%20International!%20I%20would%20like%20to%20learn%20more%20about%20partnering%20with%20you."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#25D366] text-white font-semibold hover:bg-[#128C7E] hover:shadow-[0_0_40px_rgba(37,211,102,0.6)] transition-all"
@@ -59,7 +59,7 @@ const Contact = () => {
             <div className="glass rounded-xl p-6 text-left">
               <div className="flex items-center gap-2 text-primary mb-2">
                 <MapPin size={16} />
-                <span className="text-xs uppercase tracking-wider font-semibold">iLink Rwanda</span>
+                <span className="text-xs uppercase tracking-wider font-semibold">i Link Rwanda</span>
               </div>
               <div className="font-display font-semibold text-lg">Regional Headquarters</div>
               <div className="text-sm text-muted-foreground mt-1">Vision Arcade, Kigali, Rwanda</div>
@@ -67,7 +67,7 @@ const Contact = () => {
             <div className="glass rounded-xl p-6 text-left">
               <div className="flex items-center gap-2 text-primary mb-2">
                 <MapPin size={16} />
-                <span className="text-xs uppercase tracking-wider font-semibold">iLink Tanzania</span>
+                <span className="text-xs uppercase tracking-wider font-semibold">i Link Tanzania</span>
               </div>
               <div className="font-display font-semibold text-lg">Operations Base</div>
               <div className="text-sm text-muted-foreground mt-1">Kinondoni, Dar es Salaam, Tanzania</div>

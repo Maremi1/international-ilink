@@ -17,8 +17,8 @@ const Footer = () => {
         />
         <div className="relative container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="iLink" className="h-9 w-auto" width={36} height={36} />
-            <span className="font-display text-lg font-bold">iLink International</span>
+            <img src={logo} alt="i Link" className="h-9 w-auto" width={36} height={36} />
+            <span className="font-display text-lg font-bold">i Link International</span>
           </div>
           <div className="font-display text-sm md:text-base font-medium tracking-[0.25em] uppercase text-gradient">
             Bridging Capital · Innovation · Global Markets
@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} iLink International. All rights reserved.
+            © {new Date().getFullYear()} i Link International. All rights reserved.
           </div>
           <div className="text-xs text-muted-foreground">
             Kigali, Rwanda · Dar es Salaam, Tanzania

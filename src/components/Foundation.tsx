@@ -38,7 +38,7 @@ const Foundation = () => {
               <span className="text-gradient">Socio-Economic Empowerment</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              iLink International directs a portion of profits to our philanthropic arm,
+              i Link International directs a portion of profits to our philanthropic arm,
               Mama Mia's Foundation. We move beyond charity to create mechanisms for
               sustainable development.
             </p>

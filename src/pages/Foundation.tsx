@@ -40,8 +40,8 @@ const Foundation = () => {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
       <SEO 
-        title="Mama Mia's Foundation | iLink International"
-        description="Mama Mia's Foundation is the philanthropic heart of iLink International, creating sustainable mechanisms for socio-economic empowerment and humanitarian support."
+        title="Mama Mia's Foundation | i Link International"
+        description="Mama Mia's Foundation is the philanthropic heart of i Link International, creating sustainable mechanisms for socio-economic empowerment and humanitarian support."
         canonicalUrl="/foundation"
       />
       <Navbar />
@@ -69,7 +69,7 @@ const Foundation = () => {
                 Building a Future of <span className="text-gradient">Dignity & Opportunity</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Mama Mia's Foundation is the philanthropic heart of iLink International.
+                Mama Mia's Foundation is the philanthropic heart of i Link International.
                 We move beyond charity to create sustainable mechanisms for socio-economic
                 empowerment — turning generosity into long-term, measurable change.
               </p>
@@ -100,7 +100,7 @@ const Foundation = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We believe lasting change comes not from handouts, but from opportunity.
-              Funded by a portion of iLink International's profits, the Foundation channels
+              Funded by a portion of i Link International's profits, the Foundation channels
               resources into programs that empower people to lift themselves, their families,
               and their communities — creating ripples of resilience that endure.
             </p>
